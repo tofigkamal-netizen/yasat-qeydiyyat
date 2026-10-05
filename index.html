@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Şəhid ailə tərkibi və əlilliyi olan şəxslər</title>
+<style>
+:root{--blue:#2196f3;--line:#dee2e6;--txt:#212529;--mut:#6c757d;--g:#2e9bff;--r:#e53935;--k:#212529}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.4 "Segoe UI",Roboto,Arial,sans-serif;color:var(--txt);background:#fff}
+.wrap{padding:0 0 24px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 10px 0;gap:10px;flex-wrap:wrap}
+.acts{display:flex;gap:8px}
+h1{font-size:18px;font-weight:400;margin:6px 0 0}
+.btn{border:1px solid var(--blue);background:var(--blue);color:#fff;border-radius:4px;padding:8px 18px;cursor:pointer;font:inherit}
+.btn.g{background:#fff;color:var(--txt);border-color:#ced4da}
+.cnt{padding:22px 10px 14px;font-size:16px}
+.tw{overflow-x:auto;border-top:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:1100px}
+th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;font-size:13px}
+th{font-weight:600}
+th input,th select{width:100%;min-width:110px;font:inherit;font-weight:400;padding:8px 10px;border:1px solid #ced4da;border-radius:4px;background:#fff}
+.b{display:inline-block;color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:3px}
+.b.Aktiv{background:var(--g)}.b.Deaktiv{background:var(--r)}.b.Blok{background:var(--k)}
+.sub{display:block;font-size:11px;color:var(--mut);margin-top:3px}
+.sub.ok{color:#198754}.sub.no{color:#dc3545}
+.dots{width:34px;height:34px;border:0;background:none;border-radius:50%;font-size:20px;line-height:1;cursor:pointer;color:var(--blue)}
+.dots:hover{background:#e3f2fd}
+#menu{position:fixed;display:none;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.15);min-width:150px;z-index:30;padding:4px 0}
+#menu button{display:block;width:100%;text-align:left;border:0;background:none;padding:9px 16px;font:inherit;cursor:pointer}
+#menu button:hover{background:#f1f3f5}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:30px 12px;z-index:40}
+.md{background:#fff;border-radius:8px;width:min(680px,100%);padding:20px}
+.md h2,.pgh h2{font-size:18px;margin:0 0 4px;font-weight:600}
+.hi{list-style:none;margin:12px 0 0;padding:0}
+.hi li{padding:8px 0;border-bottom:1px solid var(--line)}
+.hi time{color:var(--mut);font-size:12px;display:block}
+#fv{display:none;border-top:1px solid var(--line);padding:16px 12px 40px}
+.pgh{display:flex;align-items:center;gap:14px;max-width:900px;margin:0 auto 6px}
+.pgh.pop{justify-content:space-between;max-width:none;margin:0}
+.x{border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:#666;padding:0 6px}
+.frm{max-width:580px;margin:20px auto 0}
+.fl{margin-bottom:16px}.fl label{display:block;margin-bottom:6px;color:#444}
+.fl input,.fl select,.fl textarea{width:100%;font:inherit;padding:9px 12px;background:#fafafa;border:1px solid #ced4da;border-radius:4px}
+.fl textarea{min-height:60px;resize:vertical}
+.fl input[readonly]{color:#555;background:#f1f3f5}
+.two{display:flex}.two input{border-radius:4px 0 0 4px}.two .yn{background:#009688;border-color:#009688;border-radius:0 4px 4px 0;padding:0 20px;white-space:nowrap}
+.note{background:#fff3cd;border:1px solid #ffe69c;border-radius:6px;padding:8px 12px;margin-top:8px;font-size:13px}
+.note.er{background:#f8d7da;border-color:#f1aeb5}
+.note.okb{background:#d1e7dd;border-color:#a3cfbb}
+.full{width:100%;margin-top:6px;padding:11px}
+.card{border:1px solid var(--line);border-radius:6px;padding:10px 14px;margin:14px 0}
+.fam{max-width:900px;margin:18px auto 0}
+.fam .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.fam table{min-width:0}.fam .tw{overflow-x:visible}
+tr.me td{background:#f3f8ff;font-weight:600}
+.ico{border:0;background:none;color:var(--blue);cursor:pointer;padding:6px;border-radius:4px}
+.ico:hover{background:#e3f2fd}
+#bn{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:60;max-width:min(640px,94vw);padding:10px 14px;border-radius:6px;gap:12px;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.2);display:none;border:1px solid}
+#bn.ok{background:#d1e7dd;border-color:#a3cfbb;color:#0a3622}
+#bn.warn{background:#fff3cd;border-color:#ffe69c;color:#664d03}
+#bn.er{background:#f8d7da;border-color:#f1aeb5;color:#58151c}
+#bn button{border:0;background:none;font-size:20px;cursor:pointer;color:inherit}
+</style>
+</head>
+<body>
+<div id="lv" class="wrap">
+  <div class="top"><h1>Şəhid ailə tərkibi və əlilliyi olan şəxslər</h1>
+    <div class="acts"><button class="btn g" id="tf">Test FİN-ləri</button><button class="btn g" id="mu">Müraciətlər</button><button class="btn" id="nw">⊕ Yeni</button></div></div>
+  <div class="cnt">Filter üzrə toplam nəticə sayı: <b id="cnt">0</b></div>
+  <div class="tw"><table>
+    <thead><tr>
+      <th>#</th>
+      <th><select class="flt" id="fK"><option value="">Kateqoriya</option></select></th>
+      <th><input class="flt" id="fSF" placeholder="Şəhid/əlilliyi olan şəxs FİN"></th>
+      <th>Şəhid/əlilliyi olan şəxs ad, soyad, ata adı</th>
+      <th><select class="flt" id="fR"><option value="">Qohumluq</option></select></th>
+      <th><input class="flt" id="fF" placeholder="FİN"></th>
+      <th><input class="flt" id="fA" placeholder="A.S.A."></th>
+      <th>Doğum tarixi</th>
+      <th><select class="flt" id="fS"><option value="">Status</option></select></th>
+      <th></th>
+    </tr></thead>
+    <tbody id="tb"></tbody>
+  </table></div>
+</div>
+<div id="fv"></div>
+<div id="menu"><button data-a="h">Tarixçə</button><button data-a="e">Redaktə</button></div>
+<div class="ov" id="ov"><div class="md" id="md"></div></div>
+<div id="bn"></div>
+
+<script>
+const ST=['Aktiv','Deaktiv','Blok'],ED='Əlilliyi olan şəxs',CATS=['Şəhid','İtkin',ED];
+const REL=['Anası','Atası','Arvadı','Əri','Oğlu','Qızı','Qardaş','Bacı'];
+const FIELDS=['ad','soyad','ata','fin','birth','addr'];
+let uid=100;const OP='Aysel Məmmədova';
+const mk=(id,rel,fin,asa,birth,status='Blok',x={})=>({id,rel,fin,asa,birth,status,hist:[{d:'12.09.2026 10:14',t:'Əlavə edildi. Qeyd: ilkin qeydiyyat'}],...x});
+const sj=(id,type,fin,name,birth,status,members,x={})=>({id,type,fin,name,birth,status,...x,hist:[{d:'12.09.2026 10:14',t:'Əlavə edildi. Qeyd: ilkin qeydiyyat'}],members});
+let S=[
+ sj(1,'Şəhid','R4K7MZ2','ELÇİN HÜSEYNOV TAHİR OĞLU','','Aktiv',[
+  mk(11,'Anası','A8N3PQK','GÜLNARƏ HÜSEYNOVA MƏZAHİR QIZI','12.03.1958','Aktiv'),
+  mk(12,'Arvadı','B2T6WXM','SƏBİNƏ HÜSEYNOVA RAMİZ QIZI','05.09.1984'),
+  mk(13,'Oğlu','C5J1LDR','EMİL HÜSEYNOV ELÇİN OĞLU','17.02.2008'),
+  mk(14,'Qızı','D7V9HF3','AYLİN HÜSEYNOVA ELÇİN QIZI','22.11.2012','Deaktiv')]),
+ sj(2,'Şəhid','F3M8QR6','RAUF MƏMMƏDLİ ƏLİ OĞLU','','Aktiv',[
+  mk(21,'Atası','G6Y2KNA','ƏLİ MƏMMƏDLİ HACI OĞLU','08.06.1950'),
+  mk(22,'Anası','H1P5ZCB','SƏKİNƏ MƏMMƏDLİ NƏSİR QIZI','14.01.1954','Aktiv'),
+  mk(23,'Qardaş','J9D4SB5','ORXAN MƏMMƏDLİ ƏLİ OĞLU','30.07.1990','Deaktiv',{applied:true})]),
+ sj(3,'Şəhid','K2W7TE1','ŞAHİN QULİYEV VAQİF OĞLU','','Aktiv',[
+  mk(31,'Arvadı','L8R3UGC','NİGAR QULİYEVA FAİQ QIZI','19.04.1989'),
+  mk(32,'Oğlu','M4X6YA2','TURAL QULİYEV ŞAHİN OĞLU','02.10.2014')]),
+ sj(4,'Şəhid','N7B1VH9','KAMRAN ABBASOV ZAKİR OĞLU','','Aktiv',[
+  mk(41,'Anası','P3Q8DCD','ZƏRİFƏ ABBASOVA ƏKBƏR QIZI','25.12.1960'),
+  mk(42,'Bacı','Q6F2JME','LALƏ ABBASOVA ZAKİR QIZI','11.05.1992','Deaktiv')]),
+ sj(5,'Şəhid','S1G9NK3','ÜLVİ ƏSGƏROV FƏRİD OĞLU','','Aktiv',[
+  mk(51,'Atası','T5Z4LBF','FƏRİD ƏSGƏROV MİRZƏ OĞLU','03.03.1957'),
+  mk(52,'Qızı','U8C7REG','MƏRYƏM ƏSGƏROVA ÜLVİ QIZI','27.08.2010')]),
+ sj(6,'İtkin','V2H6WA5','NƏRİMAN SALMANOV İLQAR OĞLU','','Aktiv',[
+  mk(61,'Anası','W9K3XTH','FİRUZƏ SALMANOVA RZA QIZI','16.09.1962'),
+  mk(62,'Arvadı','X4M8PDJ','GÜNEL SALMANOVA ELMAN QIZI','07.02.1988')]),
+ sj(7,ED,'3CD9JKA','SEVİL MƏMMƏDOVA ƏLƏKBƏR QIZI','28.10.1976','Blok',[]),
+ sj(8,ED,'4EF2LM7','RÖVŞƏN ƏHMƏDOV NAMİQ OĞLU','04.04.1969','Blok',[]),
+ sj(9,ED,'5GH8NPB','AYNUR İSMAYILOVA VÜQAR QIZI','18.07.1994','Blok',[]),
+ sj(10,ED,'6JK1QRC','NURLAN QASIMOV RASİM OĞLU','23.01.1983','Blok',[]),
+ sj(11,ED,'7LM4STD','GÜLARƏ ŞİRİNOVA TOFİQ QIZI','09.06.1971','Blok',[]),
+ sj(12,ED,'8NP7UV1','ELMAN VƏLİYEV KAMİL OĞLU','15.11.1988','Blok',[]),
+sj(13,ED,'MUR0001','AYDIN ƏLİYEV FAİQ OĞLU','10.05.1980','Aktiv',[]),
+ sj(14,ED,'MUR0002','NƏRMİN HƏSƏNOVA ELÇİN QIZI','21.08.1975','Blok',[]),
+ sj(15,ED,'MUR0003','VAQİF RÜSTƏMOV ƏLİ OĞLU','03.02.1966','Blok',[]),
+ sj(16,ED,'MUR0004','LEYLA QƏHRƏMANOVA NAZİM QIZI','14.12.1990','Aktiv',[],{ovr:true}),
+ sj(17,ED,'MUR0005','ƏKBƏR SADIQOV MURAD OĞLU','27.03.1958','Blok',[],{act:1}),
+ sj(19,ED,'MUR0006','SAMİR İBRAHİMOV VİDADİ OĞLU','05.06.1972','Aktiv',[]),
+ sj(18,'Şəhid','SHD0099','TOFİQ ŞÜKÜROV RAMİZ OĞLU','','Aktiv',[
+  mk(181,'Atası','UYE0001','RAMİZ ŞÜKÜROV HACI OĞLU','12.01.1955','Blok'),
+  mk(182,'Anası','UYE0002','SƏADƏT ŞÜKÜROVA ƏLİ QIZI','09.07.1958','Blok'),
+  mk(183,'Qardaş','UYE0003','ELNUR ŞÜKÜROV RAMİZ OĞLU','30.05.1988','Aktiv',{ovr:true}),
+  mk(184,'Bacı','UYE0004','GÜNAY ŞÜKÜROVA RAMİZ QIZI','18.10.1993','Blok',{act:1}),
+  mk(185,'Arvadı','UYE0005','NAZİLƏ ŞÜKÜROVA ELMAN QIZI','21.03.1985','Aktiv')])
+];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const lower=s=>String(s).toLocaleLowerCase('az');
+const cap=s=>s.charAt(0).toLocaleUpperCase('az')+s.slice(1);
+const now=()=>new Date().toLocaleString('az-AZ',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+const isFam=s=>s.type==='Şəhid'||s.type==='İtkin';
+const full=o=>`${o.ad} ${o.soyad} ${o.ata}`.trim();
+const opts=(a,v,dis=[])=>a.map(x=>`<option${x===v?' selected':''}${dis.includes(x)?' disabled':''}>${x}</option>`).join('');
+
+/* Bridge / Əmək simulyasiyası (prototip) */
+const hash=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
+const MN=['RƏŞAD','ELNUR','VÜSAL','TURAL','ORXAN','FAİQ','NİJAT','KƏRİM','SAMİR','ZAUR'],FN=['AYGÜN','SƏBİNƏ','LALƏ','NURANƏ','GÜNEL','AYNUR','XƏYALƏ','KÖNÜL','SEVDA','ÜLKƏR'],
+  SY=['MƏMMƏDOV','HÜSEYNOV','ƏLİYEV','QULİYEV','NƏBİYEV','İSMAYILOV','RZAYEV','MUSAYEV'],RY=['NƏSİMİ','SABUNÇU','YASAMAL','XƏTAİ','BİNƏQƏDİ','SALYAN'];
+function bridgeData(fin,f){
+  const h=hash(fin),fem=f==null?h%2===1:f,pk=(a,k)=>a[(h>>>k)%a.length],sy=pk(SY,6);
+  const dd=String(1+h%28).padStart(2,'0'),mm=String(1+(h>>>4)%12).padStart(2,'0');
+  return {ad:fem?pk(FN,3):pk(MN,3),soyad:fem?sy+'A':sy,ata:pk(MN,9)+(fem?' QIZI':' OĞLU'),birth:`${dd}.${mm}.${1950+(h>>>8)%55}`,addr:`BAKI ŞƏHƏRİ, ${pk(RY,12)} RAYONU, EV ${1+(h>>>5)%90}`};
+}
+/* Bridge simulyasiyası (prototip): reyestrdə FİN üzrə həm əlillik, həm şəhid ailə üzvlüyü saxlanılır. Reyestrdə olmayan FİN → "məlumat tapılmadı" */
+const BR={},NF=new Set(['MUR0003','MUR0004','MUR0005','UYE0002','UYE0003','UYE0004']),MT='TOFİQ ŞÜKÜROV RAMİZ OĞLU';
+const RC={'Atası':'ATA','Anası':'ANA','Arvadı':'ARV','Əri':'ERI','Oğlu':'OGL','Qızı':'QIZ','Qardaş':'QAR','Bacı':'BAC'},FEM=['Anası','Arvadı','Qızı','Bacı'];
+const addBR=(fin,o={},data)=>{BR[fin]={dis:o.dis||null,grp:o.grp||3,fam:o.fam||null,...(data||bridgeData(fin,o.fem))}};
+addBR('EDV0001',{dis:'ok',grp:3,fem:false});addBR('EDV0002',{fem:true});addBR('EDV0003',{dis:'exp',fem:false});
+addBR('SHD0001',{fem:false});addBR('YOX0001',{fem:true});addBR('IKI0001',{dis:'ok',grp:2,fam:{rel:'Atası',martyr:'—'},fem:false});
+Object.keys(RC).forEach(r=>addBR(RC[r]+'0001',{fam:{rel:r,martyr:'—'},fem:FEM.includes(r)}));
+addBR('MUR0001',{dis:'ok',grp:3});addBR('MUR0002',{dis:'ok',grp:2});addBR('MUR0006',{dis:'exp'});
+addBR('UYE0001',{dis:'ok',grp:3,fam:{rel:'Atası',martyr:MT}});addBR('UYE0005',{fem:true});
+function checkOf(member,fin){
+  const b=BR[fin];if(!b)return {src:'Bridge',found:false,ok:false,text:'məlumat tapılmadı'};
+  const ok=member?!!b.fam:b.dis==='ok';
+  return {src:'Bridge',found:true,ok,text:member?(ok?`şəhid ailə üzvüdür (${b.fam.rel})`:'şəhid ailə üzvü deyil'):(ok?`əlilliyi var (${b.grp} qrup)`:b.dis==='exp'?'əlilliyin müddəti bitib':'əlilliyi yoxdur')};
+}
+function bridgeAll(fin){
+  const b=BR[fin];if(!b)return {found:false,ok:false,text:'məlumat tapılmadı'};
+  const p=[];if(b.fam)p.push(`şəhid ailə üzvüdür: ${b.fam.martyr} (${b.fam.rel})`);
+  if(b.dis==='ok')p.push(`əlilliyi var (${b.grp} qrup)`);else if(b.dis==='exp')p.push('əlilliyin müddəti bitib');
+  return {found:true,ok:!!b.fam||b.dis==='ok',text:p.join('; ')||'əlilliyi və şəhid ailə üzvü məlumatı yoxdur'};
+}
+
+function prep(s){
+  const sp=(o,f)=>{const p=f.split(' ');o.ad=p[0];o.soyad=p[1]||'';o.ata=p.slice(2).join(' ');o.addr=o.addr||'';o.birth=o.birth||''};
+  const rule=(o,mem)=>{if(!BR[o.fin]&&!NF.has(o.fin)){const ok=!/\d$/.test(o.fin);addBR(o.fin,{dis:!mem&&ok?'ok':null,fam:mem&&ok?{rel:o.rel,martyr:s.name}:null},{ad:o.ad,soyad:o.soyad,ata:o.ata,birth:o.birth,addr:o.addr||'BAKI ŞƏHƏRİ'})}o.chk=o.chk||checkOf(mem,o.fin);if(o.act==null)o.act=o.status==='Blok'?0:1;o.applied=!!o.applied};
+  sp(s,s.name);s.members.forEach(m=>sp(m,m.asa));
+  if(s.type===ED)rule(s,false);s.members.forEach(m=>rule(m,true));
+}
+S.forEach(prep);
+/* Şəhid/itkin Aktiv deyilsə, ailə üzvləri həmin statusla görünür (öz statusları saxlanılır) */
+const eff=(s,m)=>m?(s.status!=='Aktiv'?s.status:m.status):s.status;
+function stCell(s,m){
+  const o=m||s,e=eff(s,m);
+  let x=`<span class="b ${e}">${e}</span>`;
+  if(m&&s.status!=='Aktiv')x+=`<span class="sub">${s.type.toLowerCase()} statusuna görə</span>`;
+  return x;
+}
+let bt;
+function banner(kind,msg){const b=$('bn');b.className=kind;b.innerHTML=`<span>${esc(msg)}</span><button aria-label="Bağla" onclick="this.parentNode.style.display='none'">×</button>`;b.style.display='flex';clearTimeout(bt);bt=setTimeout(()=>b.style.display='none',9000)}
+
+CATS.forEach(c=>$('fK').add(new Option(c,c)));REL.forEach(c=>$('fR').add(new Option(c,c)));ST.forEach(c=>$('fS').add(new Option(c,c)));
+function render(){
+  const k=$('fK').value,sf=$('fSF').value.trim().toLowerCase(),r=$('fR').value,f=$('fF').value.trim().toLowerCase(),a=lower($('fA').value.trim()),st=$('fS').value;
+  let i=0,h='';
+  S.forEach(s=>{
+    (isFam(s)&&s.members.length?s.members:[null]).forEach(m=>{
+      const e=eff(s,m);
+      if(k&&s.type!==k)return;
+      if(sf&&!s.fin.toLowerCase().includes(sf))return;
+      if(r&&!(m&&m.rel===r))return;
+      if(f&&!(m&&m.fin.toLowerCase().includes(f)))return;
+      if(a&&!(m&&lower(m.asa).includes(a)))return;
+      if(st&&e!==st)return;
+      i++;
+      h+=`<tr><td>${i}</td><td>${s.type}</td><td>${esc(s.fin)}</td><td>${esc(s.name)}</td>
+        <td>${m?esc(m.rel):''}</td><td>${m?esc(m.fin):''}</td><td>${m?esc(m.asa):''}</td><td>${m?m.birth:s.birth}</td>
+        <td>${stCell(s,m)}</td>
+        <td><button class="dots" aria-label="Əməliyyatlar" data-s="${s.id}" data-m="${m?m.id:0}">⋮</button></td></tr>`;
+    });
+  });
+  $('tb').innerHTML=h||'<tr><td colspan="10">Nəticə tapılmadı. Filtri dəyişin.</td></tr>';
+  $('cnt').textContent=i;
+}
+document.querySelectorAll('.flt').forEach(el=>el.addEventListener('input',render));
+
+/* 3 nöqtə menyu */
+let cur=null;
+$('tb').addEventListener('click',ev=>{
+  const b=ev.target.closest('.dots');if(!b)return;
+  ev.stopPropagation();
+  cur={s:+b.dataset.s,m:+b.dataset.m};
+  const r=b.getBoundingClientRect(),mn=$('menu');
+  mn.style.display='block';
+  mn.style.top=Math.min(r.bottom+4,innerHeight-100)+'px';
+  mn.style.left=Math.max(8,r.right-mn.offsetWidth)+'px';
+});
+document.addEventListener('click',()=>$('menu').style.display='none');
+$('menu').addEventListener('click',ev=>{const a=ev.target.dataset.a;if(a)a==='h'?showHist():showEdit()});
+$('ov').addEventListener('click',ev=>{if(ev.target===$('ov')&&!formOpen)close_()});
+function close_(){$('ov').style.display='none'}
+
+/* Tarixçə */
+function showHist(){
+  const s=S.find(x=>x.id===cur.s),m=s.members.find(x=>x.id===cur.m);
+  const list=a=>a.length?`<ul class="hi">${a.slice().reverse().map(x=>`<li><time>${x.d}</time>${esc(x.t)}</li>`).join('')}</ul>`:'<p>Tarixçə boşdur.</p>';
+  $('md').innerHTML=`<h2>Tarixçə</h2>${m?`<b>${esc(m.asa)}</b> (${esc(m.rel)})${list(m.hist)}<h2 style="margin-top:18px">${s.type}: ${esc(s.name)}</h2>`:`<b>${esc(s.name)}</b>`}${list(s.hist)}
+    <div style="text-align:right;margin-top:16px"><button class="btn g" onclick="close_()">Bağla</button></div>`;
+  $('ov').style.display='flex';
+}
+
+/* Ümumi forma elementləri */
+function show(html){$('fv').innerHTML=html;$('lv').style.display='none';$('fv').style.display='block';scrollTo(0,0)}
+function back(){$('fv').style.display='none';$('lv').style.display='block';render()}
+const pageHead=t=>`<div class="pgh"><button class="btn g" onclick="back()">← Geri</button><h2>${t}</h2></div>`;
+const head=t=>`<div class="pgh pop"><h2>${t}</h2><button class="x" onclick="closeForm()" aria-label="Bağla">×</button></div>`;
+let formOpen=false;
+function popup(h){$('md').innerHTML=h;$('ov').style.display='flex';formOpen=true}
+function closeForm(){$('ov').style.display='none';formOpen=false}
+const fld=(l,k,v,ro)=>`<div class="fl"><label for="f_${k}">${l}</label><input id="f_${k}" data-f="${k}" value="${esc(v)}"${ro?' readonly':''}></div>`;
+const personFields=(P,o={})=>`<div class="fl"><label for="f_fin">FİN</label><span class="two"><input id="f_fin" data-f="fin" value="${esc(P.fin)}" maxlength="7">${o.nobtn?'':`<button type="button" class="btn yn" id="yn">${o.ro?'Bridge-dən yüklə':'Yenilə'}</button>`}</span><span class="sub" id="ynm"></span><div id="dm"></div></div>`
+  +fld('Ad','ad',P.ad,o.ro)+fld('Soyad','soyad',P.soyad,o.ro)+fld('Ata adı','ata',P.ata,o.ro)+fld('Təvəllüdü','birth',P.birth,o.ro)
+  +`<div class="fl"><label for="f_addr">Qeydiyyat ünvanı</label><textarea id="f_addr" data-f="addr"${o.ro?' readonly':''}>${esc(P.addr)}</textarea></div>`;
+const noteField=()=>`<div class="fl"><label for="nq">Qeyd (tarixçəyə yazılacaq)</label><textarea id="nq" placeholder="Əməliyyatın səbəbini yazın">${esc(note)}</textarea></div><div class="note er" id="er" style="display:none"></div>
+  <button class="btn full" id="sv">Yadda saxla</button><button class="btn g full" onclick="closeForm()">Ləğv et</button>`;
+function wire(P,redraw){
+  document.querySelectorAll('#md [data-f]').forEach(el=>el.oninput=()=>{let v=el.value;if(el.dataset.f==='fin'){v=v.toUpperCase();el.value=v}P[el.dataset.f]=v});
+  $('nq').oninput=()=>note=$('nq').value;
+  const y=$('yn');
+  if(y)y.onclick=()=>{
+    if(P.fin.length!==7){$('ynm').textContent='Əvvəlcə 7 simvollu FİN daxil edin.';return}
+    const b=BR[P.fin];if(!b){banner('er','Bridge sorğusu: məlumat tapılmadı.');return}
+    Object.assign(P,{ad:b.ad,soyad:b.soyad,ata:b.ata,birth:b.birth,addr:b.addr});
+    const c=(CTX.mem||CTX.ed)?checkOf(CTX.mem,P.fin):null;
+    banner(!c||c.ok?'ok':'warn','Bridge sorğusu: məlumatlar yükləndi.'+(c?' '+cap(c.text)+'.':''));redraw();
+  };
+}
+const err=m=>{const e=$('er');e.style.display='block';e.textContent=m};
+const blank=()=>({rel:'Anası',fin:'',ad:'',soyad:'',ata:'',birth:'',addr:''});
+let D=null,sel='s',note='',NW=null,CTX={};
+
+/* Redaktə: şəhid/itkin → ailə tərkibi siyahısı; əlilliyi olan şəxs → birbaşa forma */
+function showEdit(){const s=S.find(x=>x.id===cur.s);isFam(s)?openFam(s.id):openPerson(s.id,0)}
+const pen='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg>';
+function openFam(sid){
+  const s=S.find(x=>x.id===sid);
+  const row=(a,r,f,cell,e,cls)=>`<tr class="${cls}"><td>${esc(a)}</td><td>${esc(r)}</td><td>${esc(f)}</td><td>${cell}</td><td><button class="ico" aria-label="Redaktə" data-e="${e}">${pen}</button></td></tr>`;
+  const h=pageHead(`${esc(s.type)}: ${esc(s.name)}`)+`<div class="fam"><div class="row"><b>Ailə tərkibi</b><button class="btn" id="am">⊕ Ailə üzvü əlavə et</button></div>
+    <div class="tw"><table><thead><tr><th>Ad, soyad, ata adı</th><th>Qohumluq</th><th>FİN</th><th>Status</th><th></th></tr></thead><tbody>`
+    +row(s.name,s.type,s.fin,stCell(s,null),'s','me')
+    +s.members.map(m=>row(m.asa,m.rel,m.fin,stCell(s,m),m.id,'')).join('')
+    +(s.members.length?'':'<tr><td colspan="5">Ailə üzvü yoxdur. Yuxarıdakı düymə ilə əlavə edin.</td></tr>')
+    +'</tbody></table></div></div>';
+  show(h);
+  document.querySelectorAll('#fv [data-e]').forEach(b=>b.onclick=()=>openPerson(sid,b.dataset.e==='s'?0:+b.dataset.e));
+  $('am').onclick=()=>{NW={sid,p:blank()};note='';drawNew()};
+}
+function openPerson(sid,mid){D=JSON.parse(JSON.stringify(S.find(x=>x.id===sid)));sel=mid?mid:'s';note='';drawEdit()}
+function drawEdit(){
+  const fam=isFam(D),isS=sel==='s',P=isS?D:D.members.find(x=>x.id===sel),lock=!isS&&D.status!=='Aktiv';
+  CTX={mem:!isS,ed:isS&&D.type===ED};const ruled=!(isS&&fam);   /* əlilliyi olan şəxs və ya ailə üzvü: aktivləşdirmə 1 dəfə, müraciətdən sonra Blok */
+  const orig=isS?S.find(x=>x.id===D.id):S.find(x=>x.id===D.id).members.find(x=>x.id===P.id);
+  const noAkt=ruled&&P.act>=1&&orig.status!=='Aktiv';
+  let h=head('Redaktə')+'<div class="frm">';
+  if(!isS)h+=`<div class="fl"><label for="f_rel">Qohumluq əlaqəsi</label><select id="f_rel" data-f="rel">${opts(REL,P.rel)}</select></div>
+    <div class="fl"><label>${D.type}</label><input value="${esc(D.soyad+' '+D.ad+' '+D.ata+' '+D.fin)}" readonly></div>`;
+  h+=personFields(P);
+  h+=`<div class="fl"><label for="st">Status</label><select id="st" ${lock?'disabled':''}>${opts(ST,P.status,noAkt?['Aktiv']:[])}</select>`;
+  if(ruled&&P.chk)h+=`<div class="note ${P.chk.ok?'okb':'er'}">${P.chk.src} yoxlaması: ${cap(P.chk.text)}.</div>`;
+  if(lock)h+=`<div class="note">${D.type} statusu <b>${D.status}</b> olduğu üçün üzvün statusunu dəyişmək olmur. Əvvəlcə ${D.type.toLowerCase()} Aktiv edilməlidir.</div>`;
+  else if(noAkt)h+=`<div class="note er">Aktiv etmək yalnız 1 dəfə mümkündür və artıq istifadə olunub.</div>`;
+  else if(ruled&&P.status==='Aktiv')h+=`<div class="note">Bildiriş: Aktiv etmək yalnız 1 dəfə mümkündür. Bir müraciət əlavə edildikdən sonra şəxs avtomatik <b>Blok</b> olacaq.</div>`;
+  if(isS&&fam&&P.status!=='Aktiv'&&D.members.length)h+=`<div class="note">${D.type} statusu <b>${P.status}</b> olduqda bütün ailə üzvləri (${D.members.length}) də <b>${P.status}</b> görünəcək. Üzvlərin öz statusları dəyişmir, ${D.type.toLowerCase()} yenidən Aktiv edildikdə özlərinə qayıdır.</div>`;
+  h+='</div>'+noteField()+'</div>';
+  popup(h);wire(P,drawEdit);
+  $('st').onchange=()=>{P.status=$('st').value;drawEdit()};
+  $('sv').onclick=saveEdit;
+}
+function saveEdit(){
+  const bad=[D,...D.members].find(o=>!o.ad.trim()||!o.soyad.trim()||o.fin.length!==7);
+  if(bad)return err(`${bad===D?D.type:bad.rel}: ad, soyad və 7 simvollu FİN doldurulmalıdır.`);
+  const s=S.find(x=>x.id===D.id),pairs=[[s,D],...D.members.map(dm=>[s.members.find(x=>x.id===dm.id),dm])];
+  const ruled=o=>o!==s||!isFam(s),activating=(o,n)=>ruled(o)&&n.status==='Aktiv'&&o.status!=='Aktiv';
+  const parts=pairs.map(([o,n])=>{
+    const p=[];
+    if(n.status!==o.status)p.push(`Status: ${o.status} → ${n.status}`+(activating(o,n)?' (bir dəfəlik aktivləşdirmə)':'')+(o===s&&isFam(s)&&n.status!=='Aktiv'&&s.members.length?` (${s.members.length} ailə üzvünə təsir edir)`:''));
+    if(FIELDS.some(k=>o[k]!==n[k])||(n.rel!==undefined&&o.rel!==n.rel))p.push('Məlumatlar yeniləndi');
+    return p;
+  });
+  if(!parts.some(p=>p.length))return err('Dəyişiklik edilməyib.');
+  if(!note.trim())return err('Qeyd yazın. Dəyişiklik tarixçəyə qeydlə birlikdə yazılır.');
+  const d=now();
+  pairs.forEach(([o,n],i)=>{
+    if(!parts[i].length)return;
+    o.hist.push({d,t:`${parts[i].join('; ')}. Qeyd: ${note.trim()}. Əməkdaş: ${OP}`});
+    if(activating(o,n)){o.act=1;o.ovr=!(o.chk&&o.chk.ok)}
+    FIELDS.forEach(k=>o[k]=n[k]);if(n.rel!==undefined)o.rel=n.rel;o.status=n.status;
+    o[o===s?'name':'asa']=full(o);
+  });
+  closeForm();isFam(s)?openFam(s.id):render();
+}
+
+/* Təkrar yoxlaması: eyni FİN yalnız digəri Deaktiv olduqda yenidən əlavə edilə bilər */
+function dupCheck(kind,fin,rel){
+  const hits=[];
+  S.forEach(s=>{
+    if(kind==='ed'&&s.type===ED&&s.fin===fin)hits.push({o:s,desc:ED});
+    if(kind==='member')s.members.forEach(m=>{if(m.fin===fin)hits.push({o:m,desc:`${s.type} ${s.name} üzrə ${m.rel}`})});
+  });
+  if(!hits.length)return null;
+  const bad=hits.find(x=>x.o.status!=='Deaktiv');
+  if(bad)return {block:true,text:bad.o.status==='Aktiv'?`Əlavə edilə bilmir, çünki bu şəxs artıq ${bad.desc} kimi Aktiv statusda mövcuddur.`:`Əlavə edilə bilmir. Bu şəxs artıq ${bad.desc} kimi Blok statusunda mövcuddur. Yalnız Deaktiv olduqda təkrar əlavə etmək olar.`};
+  return {block:false,text:`Bu şəxs artıq ${hits[0].desc} kimi mövcuddur, amma statusu Deaktivdir.`+(kind==='member'&&rel?` (${rel} kimi əlavə edirsiniz.)`:'')};
+}
+
+/* Yeni: şəhid/itkin/əlilliyi olan şəxs. Ailə üzvü isə ailə tərkibi səhifəsindən əlavə olunur */
+$('nw').onclick=()=>{NW={cat:$('fK').value||'Şəhid',mode:'bridge',status:'Aktiv',p:blank()};note='';drawNew()};
+function drawNew(){
+  const mem=NW.sid!=null,P=NW.p,s=mem?S.find(x=>x.id===NW.sid):null,cat=NW.cat,fam=!mem&&cat!==ED,ro=fam&&NW.mode==='bridge';
+  CTX={mem,ed:!mem&&cat===ED};let h=head(mem?'Yeni ailə üzvü':'Yeni qeyd')+'<div class="frm">';
+  h+=mem?`<div class="fl"><label>${s.type}</label><input value="${esc(s.name+' '+s.fin)}" readonly></div>
+    <div class="fl"><label for="f_rel">Qohumluq əlaqəsi</label><select id="f_rel" data-f="rel">${opts(REL,P.rel)}</select></div>`
+    :`<div class="fl"><label for="nc">Kateqoriya</label><select id="nc">${opts(CATS,cat)}</select></div>`
+     +(fam?`<div class="fl"><label for="nm">Daxil etmə üsulu</label><select id="nm"><option value="bridge"${NW.mode==='bridge'?' selected':''}>Bridge sorğusu</option><option value="manual"${NW.mode==='manual'?' selected':''}>Əl ilə daxil etmə</option></select></div>`:'');
+  h+=personFields(P,{ro,nobtn:fam&&NW.mode==='manual'});
+  h+=fam?`<div class="fl"><label for="st">Status</label><select id="st">${opts(ST,NW.status)}</select></div>`
+    :`<div class="fl"><label for="st">Status</label><select id="st" disabled>${opts(ST,'Blok')}</select><div class="note">Avtomatik <b>Blok</b> statusunda yaradılır. ${mem?'Şəhid ailə üzvü olub-olmaması Bridge-dən yoxlanılır':'Əlilliyin olub-olmaması Bridge-dən yoxlanılır'}, nəticə statusda görünür. Müraciət yalnız statusu Aktiv edərkən əlavə edilə bilər (Aktiv etmək 1 dəfə mümkündür).</div></div>`;
+  h+=noteField()+'</div>';
+  popup(h);wire(P,drawNew);
+  if($('nc'))$('nc').onchange=()=>{NW.cat=$('nc').value;NW.mode='bridge';NW.status='Aktiv';drawNew()};
+  if($('nm'))$('nm').onchange=()=>{NW.mode=$('nm').value;drawNew()};
+  if(fam)$('st').onchange=()=>NW.status=$('st').value;
+  const kind=mem?'member':(cat===ED?'ed':null);
+  const showDup=()=>{const el=$('dm');const d=kind&&P.fin.length===7?dupCheck(kind,P.fin,P.rel):null;el.innerHTML=d?`<div class="note${d.block?' er':''}">${esc(d.text)}</div>`:''};
+  $('f_fin').addEventListener('input',showDup);if($('f_rel'))$('f_rel').addEventListener('input',showDup);showDup();
+  $('sv').onclick=saveNew;
+}
+function saveNew(){
+  const P=NW.p,mem=NW.sid!=null,ed=!mem&&NW.cat===ED,fam=!mem&&!ed;
+  if(!P.ad.trim()||!P.soyad.trim()||P.fin.length!==7)return err(fam&&NW.mode==='bridge'?'Əvvəlcə 7 simvollu FİN yazıb "Bridge-dən yüklə" düyməsinə basın.':'Ad, soyad və 7 simvollu FİN doldurulmalıdır.');
+  if(!note.trim())return err('Qeyd yazın. Əlavə edilmə tarixçəyə qeydlə birlikdə yazılır.');
+  const dup=mem||ed?dupCheck(mem?'member':'ed',P.fin,P.rel):null;
+  if(dup&&dup.block)return err(dup.text);
+  const d=now(),q=note.trim(),rec={...P,id:++uid};
+  if(fam){
+    Object.assign(rec,{type:NW.cat,name:full(rec),status:NW.status,members:[],hist:[{d,t:`Əlavə edildi. Mənbə: ${NW.mode==='bridge'?'Bridge sorğusu':'əl ilə daxil edilib'}. Status: ${NW.status}. Qeyd: ${q}`}]});
+    delete rec.rel;S.push(rec);banner('ok',`${NW.cat} əlavə edildi. Status: ${NW.status}.`);
+  }else{
+    const chk=checkOf(mem,P.fin);
+    Object.assign(rec,{status:'Blok',act:0,applied:false,chk,hist:[{d,t:`Əlavə edildi. Status: Blok (avtomatik). ${chk.src} yoxlaması: ${chk.text}.${dup?' '+dup.text:''} Qeyd: ${q}`}]});
+    if(mem)Object.assign(rec,{asa:full(rec)});else{Object.assign(rec,{type:ED,name:full(rec),members:[]});delete rec.rel}
+    (mem?S.find(x=>x.id===NW.sid).members:S).push(rec);
+    banner(chk.ok?'ok':'warn',chk.ok?`${chk.src} yoxlaması uğurlu: ${cap(chk.text)}. Status: Blok.`:`${chk.src} yoxlaması: ${cap(chk.text)}. Müraciət yalnız statusu Aktiv edərkən əlavə edilə bilər.`);
+  }
+  document.querySelectorAll('.flt').forEach(el=>el.value='');
+  closeForm();mem?openFam(NW.sid):render();
+}
+
+/* Müraciət əlavə et (ayrıca səhifə) */
+const IST=['Sosial müavinət','Təqaüd','Reabilitasiya','Mənzil təminatı','Digər'],TIP=['İlkin müraciət','Təkrar müraciət'];
+let A=[{id:1,d:'12.09.2026 10:20',fin:'J9D4SB5',asa:'ORXAN MƏMMƏDLİ ƏLİ OĞLU',kind:'Şəhid ailə üzvü (Qardaş), şəhid: RAUF MƏMMƏDLİ ƏLİ OĞLU',ist:'Sosial müavinət',tip:'İlkin müraciət',basis:'Bridge: şəhid ailə üzvüdür',emp:OP}],AQ='';
+let MR={fin:'',birth:'',r:null,q:null,go:null,ist:'',tip:''};
+$('mu').onclick=()=>drawMurList();
+
+/* Müraciətlər: ayrıca siyahı */
+function aRows(){
+  const rows=A.filter(a=>!AQ||lower(a.fin+' '+a.asa).includes(lower(AQ))).slice().reverse();
+  return {n:rows.length,h:rows.map((a,i)=>`<tr><td>${i+1}</td><td>${a.d}</td><td>${esc(a.fin)}</td><td>${esc(a.asa)}</td><td>${esc(a.kind)}</td><td>${esc(a.ist)}</td><td>${esc(a.tip)}</td><td>${esc(a.basis)}</td><td>${esc(a.emp)}</td></tr>`).join('')||'<tr><td colspan="9">Müraciət yoxdur.</td></tr>'};
+}
+function drawMurList(){
+  const r=aRows();
+  show(pageHead('Müraciətlər')+`<div class="top"><input id="aq" placeholder="FİN / A.S.A." value="${esc(AQ)}" style="padding:8px 10px;border:1px solid #ced4da;border-radius:4px;min-width:240px"><button class="btn" id="mnew">⊕ Müraciət əlavə et</button></div>
+    <div class="cnt">Toplam müraciət sayı: <b id="ac">${r.n}</b></div>
+    <div class="tw"><table><thead><tr><th>#</th><th>Tarix</th><th>FİN</th><th>Ad, soyad, ata adı</th><th>Müraciətçi</th><th>İstiqamət</th><th>Növ</th><th>Əsas</th><th>Əməkdaş</th></tr></thead><tbody id="at">${r.h}</tbody></table></div>`);
+  $('aq').oninput=()=>{AQ=$('aq').value.trim();const x=aRows();$('at').innerHTML=x.h;$('ac').textContent=x.n};
+  $('mnew').onclick=()=>{MR={fin:'',birth:'',r:null,q:null,go:null,ist:'',tip:''};drawMur()};
+}
+
+/* Müraciət əlavə et */
+function findPeople(fin){
+  const out=[];
+  S.forEach(s=>{if(s.type===ED&&s.fin===fin)out.push({s,m:null,o:s});s.members.forEach(m=>{if(m.fin===fin)out.push({s,m,o:m})})});
+  return out;
+}
+const murWho=(s,m,o)=>m?`Şəhid ailə üzvü: ${o.asa} (${o.rel}), ${s.type.toLowerCase()}: ${s.name}`:`Əlilliyi olan şəxs: ${o.name}`;
+const murObj=()=>{const s=S.find(x=>x.id===MR.r.sid),m=MR.r.mid?s.members.find(x=>x.id===MR.r.mid):null;return {s,m,o:m||s}};
+function murCheck(){
+  MR.q=null;MR.go=null;MR.ist='';MR.tip='';
+  if(MR.fin.length!==7||!/^\d{2}\.\d{2}\.\d{4}$/.test(MR.birth))return MR.r={kind:'err',text:'7 simvollu FİN və GG.AA.İİİİ formatında doğum tarixi daxil edin.'};
+  const list=findPeople(MR.fin);
+  if(!list.length)return MR.r={kind:'err',text:'Bu vətəndaş bazada mövcud deyil.'};
+  const p=list.find(x=>x.o.status!=='Deaktiv')||list[0];
+  if(p.o.birth!==MR.birth)return MR.r={kind:'err',text:'FİN üzrə qeyd var, amma doğum tarixi uyğun gəlmir.'};
+  MR.r={kind:'ok',sid:p.s.id,mid:p.m?p.m.id:0};
+  const {s,m,o}=murObj();
+  if(o.applied||(m&&s.status!=='Aktiv')||o.status==='Deaktiv')return;
+  const q=bridgeAll(o.fin);MR.q=q;o.chk={src:'Bridge',found:q.found,ok:q.ok,text:q.text};
+  o.hist.push({d:now(),t:`Bridge sorğusu (müraciət yoxlaması): ${q.text}. Əməkdaş: ${OP}.`});
+  MR.go=q.ok?'bridge':(o.status==='Aktiv'&&o.ovr?'ovr':null);
+}
+function murResult(){
+  const r=MR.r;
+  if(r.kind!=='ok')return `<div class="note er">${esc(r.text)}</div>`;
+  const {s,m,o}=murObj(),q=MR.q;
+  let h=`<div class="card"><b>${esc(m?m.asa:s.name)}</b><span class="sub">${m?`${esc(s.type)}: ${esc(s.name)} · ${esc(m.rel)}`:ED} · FİN ${esc(o.fin)}</span><div style="margin-top:6px">${stCell(s,m)}</div></div>`;
+  if(o.applied)return h+`<div class="note">Bu şəxs üçün müraciət artıq əlavə edilib (yalnız 1 dəfə). Təkrar əlavə etmək olmur.</div>`;
+  if(m&&s.status!=='Aktiv')return h+`<div class="note er">${s.type} statusu ${s.status} olduğu üçün müraciət əlavə etmək olmur.</div>`;
+  if(o.status==='Deaktiv')return h+`<div class="note er">Statusu Deaktivdir, müraciət əlavə etmək olmur.</div>`;
+  if(MR.go==='bridge')h+=`<div class="note okb">✓ Bridge: ${esc(cap(q.text))}.</div>`;
+  else if(MR.go==='ovr')h+=`<div class="note">Bridge-dən məlumat gəlmir (${esc(q.text)}), amma əllə aktiv edilib. Bu yalnız 1 dəfə olacaq.</div>`;
+  else return h+`<div class="note er">✗ Bridge: ${esc(cap(q.text))}. Davam etmək olmaz.</div>`+(o.status==='Blok'?(o.act?`<div class="note er">Əllə aktiv etmək artıq istifadə olunub.</div>`:`<button class="btn g full" id="pa">Bloku əllə Aktiv et (yalnız 1 dəfə)</button>`):'');
+  const sel=(id,l,a,v)=>`<div class="fl"><label for="${id}">${l}</label><select id="${id}"><option value="">Seçin</option>${a.map(x=>`<option${x===v?' selected':''}>${x}</option>`).join('')}</select></div>`;
+  return h+sel('mi','İstiqamət',IST,MR.ist)+sel('mt','Müraciət növü',TIP,MR.tip)+`<div class="note er" id="er" style="display:none"></div><button class="btn full" id="mx">Müraciət əlavə et</button>`;
+}
+function murPop(){
+  if(MR.r.kind!=='ok'||!MR.q)return;
+  const {s,m,o}=murObj(),who=esc(murWho(s,m,o)),b='<button class="btn g full" onclick="closeForm()">Bağla</button>';
+  if(MR.go==='ovr')popup(head('Bridge sorğusu')+`<div class="note">Bridge-dən məlumat gəlmir (${esc(MR.q.text)}), amma əllə aktiv edilib. Bu yalnız 1 dəfə olacaq.<br>${who}</div>`+b);
+  else if(!MR.go)popup(head('Bridge sorğusu')+`<div class="note er">Bridge: ${esc(cap(MR.q.text))}. Davam etmək olmaz.<br>${who}</div>`+b);
+}
+function drawMur(){
+  show(`<div class="pgh"><button class="btn g" onclick="drawMurList()">← Geri</button><h2>Müraciət əlavə et</h2></div><div class="frm"><p class="sub" style="font-size:13px">FİN və doğum tarixi ilə «Yoxla» basın. Bridge-dən məlumat gələrsə (və ya şəxs əllə 1 dəfə aktiv edilibsə) digər sahələr açılır.</p>
+    <div class="fl"><label for="mf">FİN</label><input id="mf" maxlength="7" value="${esc(MR.fin)}"></div>
+    <div class="fl"><label for="mb">Doğum tarixi</label><input id="mb" placeholder="GG.AA.İİİİ" value="${esc(MR.birth)}"></div>
+    <button class="btn full" id="mc">Yoxla</button>${MR.r?murResult():''}</div>`);
+  $('mf').oninput=()=>{MR.fin=$('mf').value.toUpperCase();$('mf').value=MR.fin};
+  $('mb').oninput=()=>MR.birth=$('mb').value;
+  $('mc').onclick=()=>{murCheck();drawMur();murPop()};
+  if($('mi')){$('mi').onchange=()=>MR.ist=$('mi').value;$('mt').onchange=()=>MR.tip=$('mt').value;$('mx').onclick=murAdd}
+  if($('pa'))$('pa').onclick=()=>{
+    const {o}=murObj();o.status='Aktiv';o.act=1;o.ovr=true;
+    o.hist.push({d:now(),t:`Status: Blok → Aktiv (əllə, bir dəfəlik, Bridge-dən məlumat gəlmədiyi üçün). Əməkdaş: ${OP}.`});
+    murCheck();drawMur();murPop();
+  };
+}
+function murAdd(){
+  if(!MR.ist||!MR.tip)return err('İstiqamət və müraciət növünü seçin.');
+  const {s,m,o}=murObj(),q=MR.q,d=now();
+  const basis=MR.go==='bridge'?`Bridge: ${q.text}`:'Bridge-dən gəlmədi, əllə 1 dəfə aktiv edilib';
+  const kind=m?`Şəhid ailə üzvü (${m.rel}), ${s.type.toLowerCase()}: ${s.name}`:ED;
+  o.applied=true;o.status='Blok';
+  o.hist.push({d,t:`Müraciət əlavə edildi. İstiqamət: ${MR.ist}. Növ: ${MR.tip}. Əsas: ${basis}${MR.go==='ovr'?' (1 dəfəlik icazə)':''}. Status → Blok (avtomatik). Əməkdaş: ${OP}.`});
+  A.push({id:A.length+1,d,fin:o.fin,asa:m?m.asa:s.name,kind,ist:MR.ist,tip:MR.tip,basis,emp:OP});
+  const who=murWho(s,m,o);
+  drawMurList();
+  popup(head('Müraciət əlavə edildi')+`<div class="note okb">${esc(who)}. ${esc(basis)}. İstiqamət: ${esc(MR.ist)}. Müraciət əlavə edildi, status avtomatik Blok oldu.</div><button class="btn g full" onclick="closeForm()">Bağla</button>`);
+}
+
+/* Test FİN-ləri */
+const TF=[
+ ['Yeni → Əlilliyi olan şəxs (FİN yaz → Yenilə)',[['EDV0001','məlumat gəlir, əlilliyi var (3 qrup)'],['EDV0002','məlumat gəlir, əlilliyi yoxdur'],['EDV0003','məlumat gəlir, əlilliyin müddəti bitib'],['TAP0000','məlumat tapılmadı']]],
+ ['Yeni → Şəhid / İtkin',[['SHD0001','məlumat gəlir']]],
+ ['Ailə üzvü əlavə et (FİN yaz → Yenilə)',[...Object.keys(RC).map(r=>[RC[r]+'0001',r+': məlumat gəlir, şəhid ailə üzvüdür']),['YOX0001','məlumat gəlir, şəhid ailə üzvü deyil'],['TAP0000','məlumat tapılmadı']]],
+ ['Müraciətlər → Müraciət əlavə et: əlilliyi olan şəxs (FİN + doğum tarixi → Yoxla)',[
+  ['MUR0001 · 10.05.1980','Aktiv, Bridge: əlilliyi var (3 qrup) → sahələr açılır'],
+  ['MUR0002 · 21.08.1975','Blok, Bridge: əlilliyi var (2 qrup) → Blok olsa da sahələr açılır'],
+  ['MUR0003 · 03.02.1966','Blok, Bridge-dən gəlmir → popup, davam etmir; «Bloku əllə Aktiv et» → «əllə aktiv edilib, 1 dəfə» → sahələr açılır'],
+  ['MUR0004 · 14.12.1990','Aktiv (əllə 1 dəfə aktiv edilib), Bridge-dən gəlmir → popup «yalnız 1 dəfə» + sahələr açılır'],
+  ['MUR0005 · 27.03.1958','Blok, 1 dəfəlik aktivləşdirmə istifadə olunub, Bridge-dən gəlmir → davam etmir'],
+  ['MUR0006 · 05.06.1972','Aktiv, əlilliyin müddəti bitib → davam etmir']]],
+ ['Müraciətlər → Müraciət əlavə et: şəhid ailə üzvü (şəhid: TOFİQ ŞÜKÜROV)',[
+  ['UYE0001 · 12.01.1955','Atası, Blok, Bridge: şəhid ailə üzvüdür (Atası), əlilliyi var (3 qrup) → sahələr açılır'],
+  ['UYE0002 · 09.07.1958','Anası, Blok, Bridge-dən gəlmir → davam etmir; əllə aktiv et → sahələr açılır'],
+  ['UYE0003 · 30.05.1988','Qardaş, Aktiv (əllə 1 dəfə aktiv edilib), Bridge-dən gəlmir → popup + sahələr açılır'],
+  ['UYE0004 · 18.10.1993','Bacı, Blok, 1 dəfəlik aktivləşdirmə istifadə olunub → davam etmir'],
+  ['UYE0005 · 21.03.1985','Arvadı, Aktiv, Bridge-də məlumat yoxdur → davam etmir'],
+  ['J9D4SB5 · 30.07.1990','Qardaş, müraciət artıq əlavə edilib → təkrar olmur'],
+  ['BAZ0000 · 01.01.1990','bazada yoxdur → «Bazada mövcud deyil»']]]
+];
+$('tf').onclick=()=>{
+  $('md').innerHTML='<h2>Test FİN-ləri</h2>'+TF.map(([t,rows])=>`<h3 style="font-size:14px;margin:14px 0 4px">${t}</h3><table style="min-width:0"><tbody>${rows.map(([f,d])=>`<tr><td style="white-space:nowrap"><b>${f}</b></td><td>${d}</td></tr>`).join('')}</tbody></table>`).join('')+'<div style="text-align:right;margin-top:16px"><button class="btn g" onclick="close_()">Bağla</button></div>';
+  $('ov').style.display='flex';
+};
+render();
+</script>
+</body>
+</html>
