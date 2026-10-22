@@ -6,7 +6,7 @@
 <title>Şəhid ailə tərkibi və əlilliyi olan şəxslər</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#eff1ee;--sf:#ffffff;--sf2:#f6f7f5;--ink:#1b222a;--mut:#5d6872;--line:#dadfda;--line2:#c3c9c4;
@@ -221,13 +221,71 @@ tr.cr:last-of-type td,tr.cr+tr.pr td{border-top:0}
   .ph{padding:18px 16px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== YAŞAT dizaynı ===== */
+:root{--bg:#ffffff;--sf:#ffffff;--sf2:#f8f9fa;--ink:#2d3748;--mut:#5f6b7a;--line:#e6e9ee;--line2:#d5dae1;
+  --act:#2f8fe6;--act2:#1f7bd0;--acts:#e6f1fc;--tl:#3aa79b;--tl2:#2f8f85;--nav:#2a3a55;
+  --ok:#fff;--oks:#3f8fe8;--no:#fff;--nos:#e5392f;--blk:#fff;--blks:#7b8591;
+  --serif:"Open Sans","Segoe UI",Roboto,Arial,sans-serif;--sans:"Open Sans","Segoe UI",Roboto,Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--sf:#1b2027;--sf2:#222831;--ink:#e5e9ec;--mut:#9aa5ae;--line:#2d343b;--line2:#3e464e;--acts:#1e3140}}
+:root[data-theme="dark"]{--bg:#14181d;--sf:#1b2027;--sf2:#222831;--ink:#e5e9ec;--mut:#9aa5ae;--line:#2d343b;--line2:#3e464e;--acts:#1e3140}
+body{font-size:13px;line-height:1.5}
+.nav{position:sticky;top:0;z-index:20;background:var(--nav);color:#fff;display:flex;align-items:center;gap:26px;padding:0 20px;height:48px;font-size:12.5px}
+.nav .logo{display:flex;align-items:center;gap:6px;font-weight:700;font-size:19px;letter-spacing:.01em;color:#fff}
+.nav .logo svg{color:#fff}
+.nav .mn{display:flex;align-items:center;gap:8px;background:none;border:0;color:#fff;cursor:pointer;padding:0}
+.nav .sp{margin-left:auto}.nav .rt{display:flex;align-items:center;gap:26px}
+.nav .rt span{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+@media (max-width:760px){.nav{gap:14px;padding:0 12px}.nav .hide{display:none}}
+.wrap{max-width:none;padding:20px 12px 44px}
+.top{align-items:center;margin-bottom:22px;padding:0 4px}
+h1{font:400 18px/1.3 var(--sans);letter-spacing:0}
+.btn{border-radius:3px;padding:8px 16px;font-weight:600;font-size:13px}
+.btn.g{background:var(--sf);color:var(--ink);border-color:var(--line2);font-weight:500}
+#nw{padding:0;overflow:hidden;border-color:var(--act2);box-shadow:0 1px 3px rgba(47,143,230,.35)}
+#nw i{display:inline-grid;place-items:center;align-self:stretch;width:40px;background:var(--act2);font-style:normal}
+#nw span{padding:9px 24px 9px 14px}
+.btn.back,.btn.tl{background:var(--tl);border-color:var(--tl);color:#fff}
+.btn.back:hover,.btn.tl:hover{background:var(--tl2);border-color:var(--tl2)}
+.panel{border:0;border-radius:0;background:var(--sf)}
+.cnt{margin:0 0 0 auto;font-size:15px;color:var(--ink)}
+.cnt b{font-size:15px;font-weight:700;margin-left:6px}
+.bar{padding:12px 4px;order:0}
+.srch input,.fl input,.fl select,.fl textarea,.fp input,.fp select,.fp textarea{border:1px solid var(--line2);border-radius:3px;background:var(--sf2);font-size:12.5px}
+.fp{background:var(--sf);border:1px solid var(--line);margin:0 4px 12px;border-radius:3px}
+.tw{border-top:1px solid var(--line)}
+th{background:var(--sf);color:var(--ink);font-weight:700;font-size:12px;padding:16px 12px;border-bottom:1px solid var(--line)}
+td{font-size:12px;padding:14px 12px;border-bottom:1px solid var(--line)}
+tbody tr:hover td:not(.ld){background:transparent}
+tbody tr.g0 td{border-top:1px solid var(--line)}
+tr.cr td{background:var(--sf2)}
+td.num{color:var(--ink)}
+.b{border-radius:3px;font-size:10.5px;font-weight:700;padding:3px 7px;gap:0}
+.b::before{display:none}
+.ps{border-radius:3px}
+.chip{border-radius:3px}
+.chev{border-radius:3px}
+.ico,.dots{color:var(--act)}
+.ph,.mc,.card,.md,.tp{border-radius:4px}
+.ph{border-color:var(--line)}.ph.mem{border-left-color:var(--act)}
+.md{border-radius:4px}
+.pgh h2,.md h2,.sech h3{font-weight:600}
+.frm{max-width:585px;margin:30px auto 0}
+.fl label,.fl .lb{font-size:11.5px;font-weight:400;color:var(--ink)}
+.fl input,.fl select{padding:10px 14px}
+.tab[aria-selected="true"]{color:var(--act);border-bottom-color:var(--act)}
+.two .yn{background:var(--tl);border-color:var(--tl);color:#fff;border-radius:3px;margin-left:8px}
+.two input{border-radius:3px}
 </style>
 </head>
 <body>
+<header class="nav"><div class="logo"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.2 5.3L20 8l-4.2 3.8L17 18l-5-3-5 3 1.2-6.2L4 8l5.8-.7z"/></svg>YAŞAT</div>
+<button class="mn" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17h7M17.5 14v7"/></svg>Menyu ⌄</button>
+<div class="sp"></div><div class="rt"><span class="hide">Aptek sisteminə keçid</span><span class="hide"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 4h2l2.5 11h10L20 7H6"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>Sifarişlər</span><span>TOFİQ KAMAL ⌄</span></div></header>
 <div id="lv" class="wrap">
   <div class="top">
     <h1>Şəhid ailə tərkibi və əlilliyi olan şəxslər</h1>
-    <div class="acts"><button class="btn g" id="tf">Test FİN-ləri</button><button class="btn g" id="mu">Müraciətlər</button><button class="btn" id="nw">⊕ Yeni</button></div>
+    <div class="acts"><button class="btn g" id="tf">Test FİN-ləri</button><button class="btn g" id="mu">Müraciətlər</button><button class="btn" id="nw"><i>⊕</i><span>Yeni</span></button></div>
   </div>
   <div class="panel">
     <div class="bar">
@@ -235,7 +293,7 @@ tr.cr:last-of-type td,tr.cr+tr.pr td{border-top:0}
         <input id="q" type="search" placeholder="FİN və ya ad, soyad ilə axtarın" aria-label="Axtarış"></div>
       <button class="btn g fbtn" id="fb" aria-expanded="false" aria-controls="fp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg>Filtr<span class="badge" id="fbn"></span></button>
       <button class="btn g" id="xl" title="Cari nəticələri, ailə üzvləri ilə birlikdə Excel-ə ixrac edir"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Excel ixrac</button>
-      <div class="cnt">Nəticə<b id="cnt">0</b></div>
+      <div class="cnt">Filter üzrə toplam nəticə sayı:<b id="cnt">0</b></div>
     </div>
     <div class="chips" id="chips"></div>
     <div class="fp" id="fp" hidden></div>
@@ -575,7 +633,7 @@ function showHist(){
 /* Ümumi forma elementləri */
 function show(html){$('fv').innerHTML=html;$('lv').style.display='none';$('fv').style.display='block';$('menu').style.display='none';scrollTo(0,0)}
 function back(){PROF=null;$('fv').style.display='none';$('lv').style.display='block';render()}
-const pageHead=t=>`<div class="pgh"><button class="btn g" onclick="back()">← Geri</button><h2>${t}</h2></div>`;
+const pageHead=t=>`<div class="pgh"><button class="btn back" onclick="back()">« Siyahıya qayıt</button><h2>${t}</h2></div>`;
 const head=t=>`<div class="pgh pop"><h2>${t}</h2><button class="x" onclick="closeForm()" aria-label="Bağla">×</button></div>`;
 let formOpen=false;
 function popup(h){$('md').innerHTML=h;$('ov').style.display='flex';formOpen=true}
@@ -612,7 +670,7 @@ function openProfile(sid,mid,tab){
   const s=S.find(x=>x.id===sid),m=mid?s.members.find(x=>x.id===mid):null,o=m||s,root=isFam(s)&&!m;
   const pool=root?[s,...s.members]:[o];
   const nm=m?m.asa:s.name;
-  const crumb=`<nav class="crumb" aria-label="Naviqasiya"><button class="btn g" onclick="back()">← Siyahı</button>${m?`<span>/</span><button class="lnk" data-p="${s.id}:0">${esc(s.type)} ailəsi: ${esc(s.name)}</button>`:''}</nav>`;
+  const crumb=`<nav class="crumb" aria-label="Naviqasiya"><button class="btn back" onclick="back()">« Siyahıya qayıt</button>${m?`<span>/</span><button class="lnk" data-p="${s.id}:0">${esc(s.type)} ailəsi: ${esc(s.name)}</button>`:''}</nav>`;
   const fact=(k,v,w)=>`<div${w?' class="wide"':''}><dt>${k}</dt><dd>${v}</dd></div>`;
   let facts;
   if(root)facts=fact('FİN',esc(s.fin))+fact('Kateqoriya',esc(s.type))+fact('Ailə üzvləri',`${s.members.length} nəfər`)+fact('Status',stCell(s,null))
@@ -855,7 +913,7 @@ function murPop(){
 }
 function murBack(){MR.from?openProfile(MR.from.sid,MR.from.mid,'m'):drawMurList()}
 function drawMur(){
-  show(`<div class="pgh"><button class="btn g" onclick="murBack()">← Geri</button><h2>Müraciət əlavə et</h2></div><div class="panel" style="padding:20px"><div class="frm" style="margin-top:0"><p class="sub" style="font-size:14px;margin:0 0 14px">FİN və doğum tarixi ilə «Yoxla» basın. Bridge-dən məlumat gələrsə (və ya şəxs əllə 1 dəfə aktiv edilibsə) digər sahələr açılır.</p>
+  show(`<div class="pgh"><button class="btn back" onclick="murBack()">« Siyahıya qayıt</button><h2>Müraciət əlavə et</h2></div><div class="panel" style="padding:20px"><div class="frm" style="margin-top:0"><p class="sub" style="font-size:14px;margin:0 0 14px">FİN və doğum tarixi ilə «Yoxla» basın. Bridge-dən məlumat gələrsə (və ya şəxs əllə 1 dəfə aktiv edilibsə) digər sahələr açılır.</p>
     <div class="fl"><label for="mf">FİN</label><input id="mf" maxlength="7" value="${esc(MR.fin)}"></div>
     <div class="fl"><label for="mb">Doğum tarixi</label><input id="mb" placeholder="GG.AA.İİİİ" value="${esc(MR.birth)}"></div>
     <button class="btn full" id="mc">Yoxla</button>${MR.r?murResult():''}</div></div>`);
